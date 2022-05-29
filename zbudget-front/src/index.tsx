@@ -17,9 +17,8 @@ root.render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route path='budget' element={<Budget />} />
-          <Route path='accounts' element={<Accounts />}>
-            <Route path=':accountId' element={<Account />} />
-          </Route>
+          <Route path='accounts' element={<Accounts />}></Route>
+          <Route path='accounts/:accountId' element={<Account />} />
           <Route
             path="*"
             element={
