@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { accountsSeedData, Accounts } from "./Accounts/Accounts";
+import { Account, getAccounts } from "./Data/data";
 
 export default function Sidebar() {
-    let accounts: Accounts[] = accountsSeedData();
+    let accounts: Account[] = getAccounts();
     let accountList = accounts.map((account) => 
         <li key={account.name}>
             <Link to={`/accounts/${account.id}`}>{account.name} - ${account.balance}</Link>

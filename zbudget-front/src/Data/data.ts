@@ -1,16 +1,10 @@
-export class Accounts {
+export interface Account {
     id: number;
     name: string;
     balance: number;
-
-    constructor(id: number, name: string, balance: number) {
-        this.id = id;
-        this.name = name;
-        this.balance = balance;
-    }
 }
 
-export function accountsSeedData(): Accounts[] {
+export function getAccounts(): Account[] {
     return [
         {
           id: 0,
