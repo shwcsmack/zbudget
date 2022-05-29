@@ -72,6 +72,10 @@ export interface BudgetItem {
   availible: number;
 }
 
+export function getBudgetItemsByCategoryId(categoryId: number): BudgetItem[] {
+  return getBudgetItems().filter((item) => item.category.id === categoryId)
+}
+
 export function getBudgetItems(): BudgetItem[] {
   return [
     {
